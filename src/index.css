@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-government-50: #f0f9ff;
+  --color-government-100: #e0f2fe;
+  --color-government-200: #bae6fd;
+  --color-government-300: #7dd3fc;
+  --color-government-400: #38bdf8;
+  --color-government-500: #0ea5e9;
+  --color-government-600: #0284c7;
+  --color-government-700: #0369a1;
+  --color-government-800: #075985;
+  --color-government-900: #0c4a6e;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
