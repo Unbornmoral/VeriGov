@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import LandingPage from './pages/LandingPage';
 import AdminDashboard from './pages/AdminDashboard';
 import EmployeeVerification from './pages/EmployeeVerification';
+import AnomalyDetection from './pages/AnomalyDetection';
 
 // Placeholder for missing pages
 const Placeholder = ({ name }) => (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/verify" element={<EmployeeVerification />} />
-          <Route path="/anomalies" element={<Placeholder name="Anomaly Detection" />} />
+          <Route path="/anomalies" element={<AnomalyDetection />} />
           <Route path="/employees" element={<Placeholder name="Employees" />} />
         </Routes>
       </Layout>

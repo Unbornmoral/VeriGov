@@ -63,6 +63,16 @@ All API interactions are centralized in `src/services/squadService.js`.
 - **Purpose**: Fetch detailed list of flagged employees.
 - **Expected Response**: Array of objects `{ id, employeeName, employeeId, reason, riskScore, status, timestamp }`.
 
+#### `resolveAnomaly(anomalyId)` (Placeholder logic in UI)
+- **Purpose**: Mark an anomaly as resolved.
+- **Expected Request**: POST to `/anomalies/{id}/resolve`.
+- **Expected Response**: `{ success: true, message: "Anomaly resolved" }`.
+
+#### `escalateAnomaly(anomalyId)` (Placeholder logic in UI)
+- **Purpose**: Escalate an anomaly for further investigation.
+- **Expected Request**: POST to `/anomalies/{id}/escalate`.
+- **Expected Response**: `{ success: true, message: "Anomaly escalated" }`.
+
 ## 3. Integration Tips
 
 1. **Error Handling**: The frontend currently logs errors to the console. Implement more robust UI notifications (e.g., Toast notifications) during integration.
