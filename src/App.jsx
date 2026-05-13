@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import LandingPage from './pages/LandingPage';
 import AdminDashboard from './pages/AdminDashboard';
+import EmployeeVerification from './pages/EmployeeVerification';
 
 // Placeholder for missing pages
 const Placeholder = ({ name }) => (
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<AdminDashboard />} />
-          <Route path="/verify" element={<Placeholder name="Employee Verification" />} />
+          <Route path="/verify" element={<EmployeeVerification />} />
           <Route path="/anomalies" element={<Placeholder name="Anomaly Detection" />} />
           <Route path="/employees" element={<Placeholder name="Employees" />} />
         </Routes>
