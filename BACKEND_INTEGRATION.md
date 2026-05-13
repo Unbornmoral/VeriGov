@@ -63,6 +63,28 @@ All API interactions are centralized in `src/services/squadService.js`.
 - **Purpose**: Fetch detailed list of flagged employees.
 - **Expected Response**: Array of objects `{ id, employeeName, employeeId, reason, riskScore, status, timestamp }`.
 
+#### `getEmployeeProfile(employeeId)`
+- **Purpose**: Fetch detailed information for a single employee.
+- **Expected Response**: 
+```json
+{
+  "id": "string",
+  "name": "string",
+  "department": "string",
+  "role": "string",
+  "photo": "URL string",
+  "joinedDate": "YYYY-MM-DD",
+  "status": "active" | "inactive",
+  "riskScore": number,
+  "verificationHistory": [
+    { "date": "ISO-8601", "status": "string", "method": "string", "confidence": number, "reason": "optional string" }
+  ],
+  "attendanceTimeline": [
+    { "date": "ISO-8601", "status": "present" | "absent", "checkIn": "time", "checkOut": "time" }
+  ]
+}
+```
+
 #### `resolveAnomaly(anomalyId)` (Placeholder logic in UI)
 - **Purpose**: Mark an anomaly as resolved.
 - **Expected Request**: POST to `/anomalies/{id}/resolve`.

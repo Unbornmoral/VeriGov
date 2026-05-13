@@ -108,5 +108,34 @@ export const squadService = {
       ];
     }
     throw new Error('Real API not implemented');
+  },
+
+  getEmployeeProfile: async (employeeId) => {
+    if (config.useMock) {
+      await delay(600);
+      return {
+        id: employeeId || 'EMP001',
+        name: 'John Doe',
+        department: 'Ministry of Finance',
+        role: 'Senior Accountant',
+        photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        joinedDate: '2020-03-15',
+        status: 'active',
+        riskScore: 95,
+        verificationHistory: [
+          { date: '2026-05-01', status: 'verified', method: 'Fingerprint', confidence: 0.99 },
+          { date: '2026-04-15', status: 'verified', method: 'Face', confidence: 0.98 },
+          { date: '2026-05-13', status: 'flagged', method: 'Face', confidence: 0.42, reason: 'Duplicate found' },
+        ],
+        attendanceTimeline: [
+          { date: '2026-05-08', status: 'present', checkIn: '08:00 AM', checkOut: '05:00 PM' },
+          { date: '2026-05-09', status: 'present', checkIn: '08:15 AM', checkOut: '05:10 PM' },
+          { date: '2026-05-10', status: 'absent', checkIn: '-', checkOut: '-' },
+          { date: '2026-05-11', status: 'present', checkIn: '07:55 AM', checkOut: '04:55 PM' },
+          { date: '2026-05-12', status: 'present', checkIn: '08:05 AM', checkOut: '05:05 PM' },
+        ]
+      };
+    }
+    throw new Error('Real API not implemented');
   }
 };

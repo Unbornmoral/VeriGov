@@ -5,14 +5,8 @@ import LandingPage from './pages/LandingPage';
 import AdminDashboard from './pages/AdminDashboard';
 import EmployeeVerification from './pages/EmployeeVerification';
 import AnomalyDetection from './pages/AnomalyDetection';
-
-// Placeholder for missing pages
-const Placeholder = ({ name }) => (
-  <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-    <h2 className="text-2xl font-bold text-slate-800 mb-4">{name} Page</h2>
-    <p className="text-slate-600">This page is currently under development. Please check back later.</p>
-  </div>
-);
+import Employees from './pages/Employees';
+import EmployeeProfile from './pages/EmployeeProfile';
 
 function App() {
   return (
@@ -23,7 +17,8 @@ function App() {
           <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/verify" element={<EmployeeVerification />} />
           <Route path="/anomalies" element={<AnomalyDetection />} />
-          <Route path="/employees" element={<Placeholder name="Employees" />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/employees/:id" element={<EmployeeProfile />} />
         </Routes>
       </Layout>
     </Router>
