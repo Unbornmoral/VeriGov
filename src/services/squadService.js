@@ -63,5 +63,50 @@ export const squadService = {
       ];
     }
     throw new Error('Real API not implemented');
+  },
+
+  getDashboardStats: async () => {
+    if (config.useMock) {
+      await delay(500);
+      return {
+        totalEmployees: 12450,
+        verifiedEmployees: 11820,
+        flaggedAnomalies: 42,
+        pendingVerifications: 588,
+        verificationRate: 94.9,
+      };
+    }
+    throw new Error('Real API not implemented');
+  },
+
+  getAttendanceTrends: async () => {
+    if (config.useMock) {
+      await delay(600);
+      return [
+        { name: 'Mon', attendance: 92 },
+        { name: 'Tue', attendance: 95 },
+        { name: 'Wed', attendance: 94 },
+        { name: 'Thu', attendance: 93 },
+        { name: 'Fri', attendance: 89 },
+        { name: 'Sat', attendance: 45 },
+        { name: 'Sun', attendance: 38 },
+      ];
+    }
+    throw new Error('Real API not implemented');
+  },
+
+  getAnomalySpikes: async () => {
+    if (config.useMock) {
+      await delay(700);
+      return [
+        { name: 'Week 1', spikes: 4 },
+        { name: 'Week 2', spikes: 7 },
+        { name: 'Week 3', spikes: 12 },
+        { name: 'Week 4', spikes: 8 },
+        { name: 'Week 5', spikes: 15 },
+        { name: 'Week 6', spikes: 9 },
+      ];
+    }
+    throw new Error('Real API not implemented');
   }
 };

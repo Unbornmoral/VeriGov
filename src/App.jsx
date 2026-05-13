@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import LandingPage from './pages/LandingPage';
+import AdminDashboard from './pages/AdminDashboard';
 
 // Placeholder for missing pages
 const Placeholder = ({ name }) => (
@@ -17,7 +18,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/dashboard" element={<Placeholder name="Dashboard" />} />
+          <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/verify" element={<Placeholder name="Employee Verification" />} />
           <Route path="/anomalies" element={<Placeholder name="Anomaly Detection" />} />
           <Route path="/employees" element={<Placeholder name="Employees" />} />
